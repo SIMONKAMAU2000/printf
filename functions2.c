@@ -1,4 +1,5 @@
 #include "main.h"
+
 /****************** PRINT POINTER ******************/
 /**
  * print_pointer - Prints the value of a pointer variable
@@ -10,6 +11,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
+
 int print_pointer(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -42,6 +44,7 @@ ind++;
 return (write_pointer(buffer, ind, length,
 width, flags, padd, extra_c, padd_start));
 }
+
 /************************* PRINT NON PRINTABLE *************************/
 /**
  * print_non_printable - Prints ascii codes in hexa of non printable chars
@@ -53,6 +56,7 @@ width, flags, padd, extra_c, padd_start));
  * @size: Size specifier
  * Return: Number of chars printed
  */
+
 int print_non_printable(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -75,6 +79,7 @@ i++;
 buffer[i + offset] = '\0';
 return (write(1, buffer, i + offset));
 }
+
 /************************* PRINT REVERSE *************************/
 /**
  * print_reverse - Prints reverse string.
@@ -86,6 +91,7 @@ return (write(1, buffer, i + offset));
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
+
 int print_reverse(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -111,6 +117,7 @@ count++;
 }
 return (count);
 }
+
 /************************* PRINT A STRING IN ROT13 *************************/
 /**
  * print_rot13string - Print a string in rot13.
@@ -122,6 +129,7 @@ return (count);
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
+
 int print_rot13string(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
